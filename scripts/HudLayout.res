@@ -1,6 +1,7 @@
+#base ../resource/speedo/hspeedo.res
+
 "Resource/HudLayout.res"
 {
-
 	HudHintDisplay
 	{
 		"fieldName"	"HudHintDisplay"

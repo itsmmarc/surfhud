@@ -1,0 +1,7 @@
+"sm_restart"    "Restart Run"
+"sm_teleport"   "Restart Stage"
+"+left"         "Turn Left"
+"+right"        "Turn Right"
+"noclip;sm_noclip"     "Noclip"
+"sm_saveloc"    "Save Location"
+"sm_tele"       "Teleport to Saved Location"
