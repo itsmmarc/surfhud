@@ -273,66 +273,14 @@ Scheme
 		// fonts are used in order that they are listed
 		// fonts listed later in the order will only be used if they fulfill a range not already filled
 		// if a font fails to load then the subsequent fonts will replace
-		"Default"
+		"Default"   // ksf side panel
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
-				"tall"		"15"
+				"name"		"Roboto"
+				"tall"		"9"
 				"weight"	"50"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"480 599"
-				"antialias"	"1"
-			}
-			"2"
-			{
-				"name"		"URW Gothic L"
-				"tall"		"15"
-				"weight"	"50"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"600 767"
-				"antialias"	"1"
-			}
-			"3"
-			{
-				"name"		"URW Gothic L"
-				"tall"		"15"
-				"weight"	"50"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"768 1023"
-				"antialias"	"1"
-			}
-			"4"
-			{
-				"name"		"URW Gothic L"
-				"tall"		"20"
-				"weight"	"50"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"1024 1199"
-				"antialias"	"1"
-			}
-			"5"
-			{
-				"name"		"URW Gothic L"
-				"tall"		"15"
-				"weight"	"50"
-				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
-				"yres"	"1200 6000"
-				"antialias"	"1"
-			}
-			"6"
-			{
-				"tall"		"15"
-				"weight"	"50"
-				"range" 	"0x0000 0x00FF"
-				"weight"	"900"
-				"antialias"	"1"
-			}
-			"7"
-			{
-				"name"		"URW Gothic L"
-				"tall"		"15"
-				"weight"	"50"
 				"antialias"	"1"
 			}
 		}
@@ -340,7 +288,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -348,7 +296,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"15"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -356,7 +304,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"19"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -365,7 +313,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"26"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -374,7 +322,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"30"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -383,7 +331,7 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"18"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"900"
@@ -393,7 +341,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"14"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -401,7 +349,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"18"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -409,7 +357,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"23"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -418,7 +366,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"31"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -427,7 +375,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"36"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -436,7 +384,7 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"22"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"900"
@@ -447,7 +395,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"19"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -455,7 +403,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"24"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -463,7 +411,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"31"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -472,7 +420,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"41"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -481,7 +429,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"48"
 				"weight"	"1100"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -490,7 +438,7 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"22"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"900"
@@ -501,7 +449,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"22"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -509,7 +457,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"28"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -517,7 +465,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"36"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -526,7 +474,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"48"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -535,7 +483,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"56"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -544,7 +492,7 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"28"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"900"
@@ -555,7 +503,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"24"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -563,7 +511,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"34"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -571,7 +519,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"42"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -580,7 +528,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"54"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -589,7 +537,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"64"
 				"weight"	"1300"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -598,7 +546,7 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"32"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"900"
@@ -609,7 +557,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"14"
 				"weight"	"700"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -628,7 +576,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"11"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"800"
@@ -638,7 +586,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"10"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -647,7 +595,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -656,7 +604,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"15"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -665,7 +613,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"20"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -674,7 +622,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"24"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -683,7 +631,7 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"0"
@@ -694,7 +642,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -703,7 +651,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"13"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -712,7 +660,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"14"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -722,7 +670,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"20"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -732,7 +680,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"24"
 				"weight"	"0"
 				"range"		"0x0000 0x017F"
@@ -742,7 +690,7 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"0"
@@ -753,7 +701,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"10"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -761,7 +709,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -769,7 +717,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"15"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -778,7 +726,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"20"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -787,7 +735,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"24"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -796,14 +744,14 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"0"
 			}
 			"7"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"11"
 				"range" 		"0x0000 0x00FF"
 				"weight"		"0"
@@ -814,7 +762,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"10"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -823,7 +771,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -832,7 +780,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"15"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -845,60 +793,28 @@ Scheme
 			// KSF / VELHUD SPEEDOMETER FONT & SIZE
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
-				"name"		"URW Gothic L" [$OSX]
+				"name"		"Roboto" [!$OSX]
+				"name"		"Roboto" [$OSX]
 				"tall"		"18"
 				"weight"	"900"
 				"antialias" "1"
 				"additive"	"1"
 			}
 		}
-		HudHintText
+		HudHintText // ksf center panel
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
-				"tall"		"15"
+				"name"		"Roboto"
+				"tall"		"9"
 				"weight"	"50"
-				"yres"	"480 599"
-			}
-			"2"
-			{
-				"name"		"URW Gothic L"
-				"tall"		"15"
-				"weight"	"50"
-				"yres"	"600 767"
-			}
-			"3"
-			{
-				"name"		"URW Gothic L"
-				"tall"		"15"
-				"weight"	"50"
-				"yres"	"768 1023"
-				"antialias" "1"
-			}
-			"4" //MAIN TIMER TEXT FONT & SIZE
-			{
-				"name"		"URW Gothic L"
-				"tall"		"20"
-				"weight"	"50"
-				"yres"	"1024 1199"
-				"antialias" "1"
-			}
-			"5"
-			{
-				"name"		"URW Gothic L"
-				"tall"		"15"
-				"weight"	"50"
-				"yres"	"1200 10000"
-				"antialias" "1"
 			}
 		}
 		HudNumbersSmall
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"16"
 				"weight"	"1000"
 				"additive"	"1"
@@ -911,7 +827,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"11"
 				"weight"	"700"
 				"antialias" "1"
@@ -924,7 +840,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"11"
 				"weight"	"700"
 				"antialias" "1"
@@ -934,7 +850,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"11"
 				"weight"	"700"
 				"antialias" "1"
@@ -944,7 +860,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"weight"	"900"
 				"antialias" "1"
@@ -953,7 +869,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"16"
 				"weight"	"900"
 				"antialias" "1"
@@ -962,7 +878,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"17"
 				"weight"	"1000"
 				"antialias" "1"
@@ -1134,7 +1050,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"  "URW Gothic L"
+				"name"  "Roboto"
 				"tall"  "28"
 				"weight" "0"
 				"additive" "1"
@@ -1199,7 +1115,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"18"
 				"weight"	"500"
 				"antialias"	"1"
@@ -1245,7 +1161,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"weight"	"700"
 				"yres"	"480 599"
@@ -1253,7 +1169,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"13"
 				"weight"	"700"
 				"yres"	"600 767"
@@ -1261,7 +1177,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"14"
 				"weight"	"700"
 				"yres"	"768 1023"
@@ -1269,7 +1185,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"20"
 				"weight"	"700"
 				"yres"	"1024 1199"
@@ -1277,7 +1193,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"24"
 				"weight"	"700"
 				"yres"	"1200 10000"
@@ -1288,7 +1204,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"weight"	"700"
 				"yres"	"480 599"
@@ -1296,7 +1212,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"13"
 				"weight"	"700"
 				"yres"	"600 767"
@@ -1304,7 +1220,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"14"
 				"weight"	"700"
 				"yres"	"768 1023"
@@ -1312,7 +1228,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"20"
 				"weight"	"700"
 				"yres"	"1024 1199"
@@ -1320,7 +1236,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"24"
 				"weight"	"700"
 				"yres"	"1200 10000"
@@ -1333,8 +1249,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
-				"name"		"URW Gothic L" [$OSX]
+				"name"		"Roboto" [!$OSX]
+				"name"		"Roboto" [$OSX]
 				"tall"		"16"
 				"weight"	"1200"
 				"antialias" "1"
@@ -1345,8 +1261,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
-				"name"		"URW Gothic L" [$OSX]
+				"name"		"Roboto" [!$OSX]
+				"name"		"Roboto" [$OSX]
 				"tall"		"12"
 				"weight"	"1200"
 				"antialias" "1"
@@ -1355,8 +1271,8 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L" [!$OSX]
-				"name"		"URW Gothic L" [$OSX]
+				"name"		"Roboto" [!$OSX]
+				"name"		"Roboto" [$OSX]
 				"tall"		"16"
 				"weight"	"1200"
 				"antialias" "1"
@@ -1370,7 +1286,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
+				"name"		"Roboto" [!$OSX]
 				"name"		"Helvetica Bold" [$OSX]
 				"weight"		"1200"
 				"tall"			"11"
@@ -1382,7 +1298,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
+				"name"		"Roboto" [!$OSX]
 				"name"		"Helvetica" [$OSX]
 				"weight"		"800"
 				"tall"			"9"
@@ -1394,7 +1310,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
+				"name"		"Roboto" [!$OSX]
 				"name"		"Helvetica Bold" [$OSX]
 				"weight"		"1200"
 				"tall"			"12"
@@ -1406,7 +1322,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
+				"name"		"Roboto" [!$OSX]
 				"name"		"Helvetica" [$OSX]
 				"weight"		"700"
 				"tall"			"9"
@@ -1418,7 +1334,7 @@ Scheme
 		{		
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
+				"name"		"Roboto" [!$OSX]
 				"name"		"Helvetica" [$OSX]
 				"tall"		"9"
 				"weight"	"900"
@@ -1431,7 +1347,7 @@ Scheme
 		{		
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
+				"name"		"Roboto" [!$OSX]
 				"name"		"Helvetica" [$OSX]
 				"tall"		"14"
 				"weight"	"600"
@@ -1444,7 +1360,7 @@ Scheme
 		{	
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
+				"name"		"Roboto" [!$OSX]
 				"name"		"Helvetica" [$OSX]
 				"tall"		"18"
 				"weight"	"600"
@@ -1457,7 +1373,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
+				"name"		"Roboto" [!$OSX]
 				"name"		"Helvetica" [$OSX]
 				"tall"		"14"
 				"weight"	"700"
@@ -1470,8 +1386,8 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" [!$OSX]
-				"name"		"URW Gothic L" [$OSX]
+				"name"		"Roboto" [!$OSX]
+				"name"		"Roboto" [$OSX]
 				"tall"		"9" 
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1495,7 +1411,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"6"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1503,7 +1419,7 @@ Scheme
 			}
 			"2"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"8"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1511,7 +1427,7 @@ Scheme
 			}
 			"3"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"10"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1520,7 +1436,7 @@ Scheme
 			}
 			"4"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"13"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1529,7 +1445,7 @@ Scheme
 			}
 			"5"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"14"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1538,7 +1454,7 @@ Scheme
 			}
 			"6"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"16"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1551,7 +1467,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"8"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1563,7 +1479,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"14"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1575,7 +1491,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"45"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1587,7 +1503,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"8"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1599,7 +1515,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"12"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1611,7 +1527,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"10"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -1623,7 +1539,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" 
+				"name"		"Roboto" 
 				"tall"		"10" [!$OSX]
 				"tall"		"11" [$OSX]
 				"weight"	"0"
@@ -1636,7 +1552,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" 
+				"name"		"Roboto" 
 				"tall"		"8" [!$OSX]
 				"tall"		"9" [$OSX]
 				"weight"	"0"
@@ -1649,7 +1565,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L" 
+				"name"		"Roboto" 
 				"tall"		"7" [!$OSX]
 				"tall"		"8" [$OSX]
 				"weight"	"0"
@@ -1662,7 +1578,7 @@ Scheme
 		{
 			"1"
 			{
-				"name"		"URW Gothic L"
+				"name"		"Roboto"
 				"tall"		"10"
 				"weight"	"0"
 				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
@@ -2450,8 +2366,13 @@ Scheme
 		"4"		"resource/CSlogo.ttf"
 		"5"
 		{
-			"name" "URW Gothic L"
-			"font" "resource/fonts/urw-gothic-l-book.ttf"
+			"Font"		"resource/fonts/Roboto-Regular.ttf"
+			"name"		"Roboto"
+		}
+        "6"
+		{
+			"Font"		"resource/fonts/Roboto-Black.ttf"
+			"name"		"Roboto Black"
 		}
 	}
 

@@ -119,7 +119,7 @@
 		{
 			"1"
 			{
-				"name"										"NK57 Monospace Sc Rg"
+				"name"										"Roboto"
 				"Tall"										"18"
 				"outline"									"1"
 				"dropshadow"								"0"
@@ -204,7 +204,7 @@
 		{
 			"1"
 			{
-				"name"		"Coolvetica Italic"
+				"name"		"Roboto Black"
 				"tall"		"18"
 				"weight"	"200"
 			}
@@ -325,14 +325,14 @@
 		{
             "1"
 			{
-				"name"		"NK57 Monospace Sc Rg"
+				"name"		"Roboto"
 				"Tall"		"13"
 				"weight"	"0"
                 "yres"	    "480 599"
 			}
             "2" // affects 1440p?
 			{
-				"name"		"NK57 Monospace Sc Rg"
+				"name"		"Roboto"
 				"Tall"		"24"
 				"weight"	"0"
                 "yres"	    "600 767"
@@ -340,14 +340,14 @@
 			}
             "3" // affects 4k?
 			{
-				"name"		"NK57 Monospace Sc Rg"
+				"name"		"Roboto"
 				"Tall"		"32"
 				"weight"	"0"
                 "yres"	    "768 1023"
 			}
 			"4"
 			{
-				"name"		"NK57 Monospace Sc Rg"
+				"name"		"Roboto"
 				"Tall"		"14"
 				"weight"	"0"
                 "yres"	    "1024 1199"
@@ -355,7 +355,7 @@
 			}
             "5"
 			{
-				"name"		"NK57 Monospace Sc Rg"
+				"name"		"Roboto"
 				"Tall"		"18"
 				"weight"	"0"
                 "yres"	    "1200 6000"
@@ -879,14 +879,14 @@
     "CustomFontFiles"
     {
         "1"
-        {
-            "font"      "resource/scheme/fonts/nk57-monospace.scrg-regular.otf"
-            "name"      "NK57 Monospace Sc Rg"
-        }
-		"2"    // main hud font
-        {
-            "Font"      "resource/scheme/fonts/coolvetica_italic.otf"
-            "name"      "Coolvetica Italic"
-        }
+		{
+			"Font"		"resource/fonts/Roboto-Regular.ttf"
+			"name"		"Roboto"
+		}
+        "2"
+		{
+			"Font"		"resource/fonts/Roboto-Black.ttf"
+			"name"		"Roboto Black"
+		}
     }
 }
