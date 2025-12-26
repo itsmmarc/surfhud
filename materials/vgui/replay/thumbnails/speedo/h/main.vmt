@@ -6,12 +6,11 @@
 //==============================================================
 // COLORS
 //--------------------------------------------------------------
-#base ../colors.vmt
+#base ../../../../../../customization/speedocolors.vmt
 
 //==============================================================
 // CONSTANTS
 //--------------------------------------------------------------
-#base ../../../../../../../cfg/jumphud/jh_speedo_d_rounding.txt
 #base ../constants/rounding.vmt
 #base ../constants/constantNumbers.vmt
 

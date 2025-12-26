@@ -1,0 +1,9 @@
+"UnlitGeneric" {
+    //==============================================================
+    // SPEEDO COLORS
+    // Modify RGB Values
+    //--------------------------------------------------------------
+    $colorMain  "{ 255 255 255 }"   // Color at 0
+    $colorGood  "{ 58 138 235 }"    // Color when gaining speed
+    $colorBad   "{ 255 71 71 }"     // Color when losing speed
+}
