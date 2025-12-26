@@ -1,15 +1,15 @@
 "GameMenu"
 {
-	"1"
+    "1"
 	{
-		"label" "Resume"
-		"command" "ResumeGame"
+		"label" ""
+		"command" ""
 		"OnlyInGame" "1"
 	}
 	"2"
 	{
-		"label" "Disconnect"
-		"command" "Disconnect"
+		"label" "Resume"
+		"command" "ResumeGame"
 		"OnlyInGame" "1"
 	}
 	"3"
@@ -20,24 +20,28 @@
 	}
 	"4"
 	{
-		"label" ""
-		"command" ""
-		"OnlyInGame" "1"
-	}
-	"5"
-	{
 		"label" "Servers"
 		"command" "OpenServerBrowser"
 	}
-	"6"
+	"5"
 	{
 		"label" "Options"
 		"command" "OpenOptionsDialog"
+	}
+    "6"
+	{
+		"label" ""
+		"command" ""
 	}
 	"7"
 	{
 		"label" "Quit"
 		"command" "Quit"
 	}
+    "8"
+	{
+		"label" "Disconnect"
+		"command" "Disconnect"
+		"OnlyInGame" "1"
 	}
-
+}
