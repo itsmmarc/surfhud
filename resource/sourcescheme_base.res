@@ -232,29 +232,14 @@
 				"blur_hidef"	"5"
 			}
 		}
-		"MenuLarge"
+		"MenuLarge" // main menu font
 		{
-			"1"	[$POSIX]
+			"1"
 			{
-				"name"		"Helvetica Bold"
+				"name"		"Roboto Black"
 				"tall"		"20"
-				"antialias" "1"
-			}
-			"1"	[$WIN32]
-			{
-				"name"		"Verdana" 
-				"tall"		"16" 
-				"weight"	"600"
-				"antialias" "1"
-			}
-			"1"	[$X360]
-			{
-				"name"		"Verdana"
-				"tall"			"14"
-				"tall_hidef"	"20"
-				"weight"	"1200"
-				"antialias" "1"
-				"outline" "1"
+				"weight"	"400"
+				"range"		"0x0000 0x017F" //	Basic Latin, Latin-1 Supplement, Latin Extended-A
 			}
 		}
 		"AchievementTitleFont"
@@ -477,12 +462,12 @@
 				"tall"		"10"
 				"weight"	"0"
 			}
-//			"1"
-//			{
-//				"name"		"FixedSys"
-//				"tall"		"20"
-//				"weight"	"0"
-//			}
+        //			"1"
+        //			{
+        //				"name"		"FixedSys"
+        //				"tall"		"20"
+        //				"weight"	"0"
+        //			}
 		}
  
 		"DefaultFixedDropShadow"
@@ -499,12 +484,12 @@
 				"weight"	"0"
 				"dropshadow" "1"
 			}
-//			"1"
-//			{
-//				"name"		"FixedSys"
-//				"tall"		"20"
-//				"weight"	"0"
-//			}
+        //			"1"
+        //			{
+        //				"name"		"FixedSys"
+        //				"tall"		"20"
+        //				"weight"	"0"
+        //			}
 		}
  
 		"CloseCaption_Normal"
