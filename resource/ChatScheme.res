@@ -30,9 +30,7 @@ Scheme
 		"Purple"				"173 151 227 255"
 		"PurpleDull"			"173 151 227 128"
 		"PurpleVeryDull"		"173 151 227 20"
-		"Black2"					"0 0 0 170"
 		"Black"					"0 0 0 255"
-		"Black3"				"0 0 0 220"
 		"SteamLightGreen"		"158 195 79 255"
 
         "Accent"                "35 125 235 255"
@@ -42,6 +40,14 @@ Scheme
         "DullWhite"				"142 142 142 255"
         "OffWhite"				"216 216 216 255"
         "Orange"				"255 155 0 255"
+
+        "Black"												"0 0 0 255"
+        "IsItTransparentBlack"							    "0 0 0 250"
+        "BarelyTransparentBlack"							"0 0 0 240"
+		"TransparentBlack"									"0 0 0 200"
+		"TransparentMediumBlack"							"0 0 0 150"
+		"TransparentLightBlack"								"0 0 0 100"
+		"TransparentLightestBlack"							"0 0 0 50"
 
         "SS_ScrollBar"										"255 255 255 50"
 		"SS_ScrollBar_BG"									"0 0 0 0"   // def "18 15 14 200"      
