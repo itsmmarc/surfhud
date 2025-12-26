@@ -235,7 +235,7 @@
         "Clamp"
         {
             "min"                                                   "0"
-            "max"                                                   "3500"
+            "max"                                                   "9999"
             "srcVar1"                                               "$value"
             "resultVar"                                             "$frame"
         }

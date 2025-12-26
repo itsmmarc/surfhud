@@ -6,7 +6,7 @@
         "wide" "72"
         "tall" "18"
         "xpos" "cs-0.5"
-        "ypos" "cs-0.5+54"
+        "ypos" "cs-0.5+54"  // controlled by customization
 
             
         "Digits_Container" {
