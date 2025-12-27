@@ -1,5 +1,5 @@
 //=====================================================
 // GAME MENU KSF SERVER LIST
 //=====================================================
-//#base ../resource/ui/custom/gamemenu/serverlist.res
+#base ../resource/ui/custom/gamemenu/serverlist.res
 //-----------------------------------------------------
