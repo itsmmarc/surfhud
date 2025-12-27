@@ -64,6 +64,7 @@
 		"dulltext"				"0"
 		"brighttext"			"1"
 		"font"					"ScoreboardMedium"
+        "AllCaps"               "1"
 		"fgcolor_override"		"White"
 
         "Pin_To_Sibling"							"HorizontalLine"
