@@ -30,7 +30,9 @@
 		"text_ygap"	"8"
 		"TextColor"	"255 170 0 220"
 
+        "paintBackground"       "1"
 		"PaintBackgroundType"	"2"
+        "bgcolor_override"      "TimerBG"
 	}
 
 	HudDeathNotice

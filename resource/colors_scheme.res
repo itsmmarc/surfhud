@@ -1,4 +1,6 @@
 #base ../customization/accentcolor.res
+#base ../customization/timerbackground.res
+
 Scheme
 {
 	//////////////////////// COLORS ///////////////////////////
@@ -108,7 +110,7 @@ Scheme
 		
 
 		"HintMessageFg"						"White"						// timer text
-		"HintMessageBg" 					"Blank"						// timer background
+		"HintMessageBg" 					"TimerBG"					// timer background
 		
         "Normal"            				"Accent"				// weapon icon select colour
 		

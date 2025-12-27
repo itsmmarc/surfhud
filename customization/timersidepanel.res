@@ -11,10 +11,10 @@
 //#base ../resource/ui/custom/sidepanel/middleleft.res
 //-----------------------------------------------------
 // MIDDLE RIGHT
-#base ../resource/ui/custom/sidepanel/middleright.res
+//#base ../resource/ui/custom/sidepanel/middleright.res
 //-----------------------------------------------------
 // BOTTOM LEFT
-//#base ../resource/ui/custom/sidepanel/bottomleft.res
+#base ../resource/ui/custom/sidepanel/bottomleft.res
 //-----------------------------------------------------
 // BOTTOM RIGHT
 //#base ../resource/ui/custom/sidepanel/bottomright.res
