@@ -8,7 +8,7 @@
 		"xpos"		"cs-0.5"
 		"ypos"		"rs1-10"
 		"wide"		"480"
-		"tall"		"100"
+		"tall"		"150"
 		"text_xpos"	"8"
 		"text_ypos"	"8"
 		"center_x"	"0"	// center text horizontally
