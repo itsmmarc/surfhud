@@ -318,6 +318,13 @@
             greaterVar      "$speed"
             lessEqualVar    "$fullframe"
         }
+        LessOrEqual {
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$prev_frame"
+            greaterVar      "$frame"
+            lessEqualVar    "$prev_frame"
+        }
         Equals {
             srcVar1 "$fullframe"
             resultVar "$frame"
@@ -576,13 +583,6 @@
 		Equals { srcVar1 "$z" resultVar "$prev_z" }
 		Equals { srcVar1 "$time" resultVar "$prev_time" }
 		Equals { srcVar1 "$v" resultVar "$prev_v" }
-        LessOrEqual {
-            srcVar1         "$update"
-            srcVar2         "$0"
-            resultVar       "$prev_frame"
-            greaterVar      "$frame"
-            lessEqualVar    "$prev_frame"
-        }
 
     //==============================================================
     // DIGIT SEPERATION
