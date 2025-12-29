@@ -17,6 +17,19 @@
 	"$const_eps" 0.009765625
 
 	"$value" 0.0 "$value_digit" 0.0
+
+    //==============================================================
+    // UPDATE RATE VARIABLES
+    //==============================================================
+    $framerate 30
+    $fullframe 0
+
+    $time 0
+    $oldtime 0
+    $interval 0
+    $const_interval 0
+    $update 0
+
     //==============================================================
     // SPEEDO CALCULATION VARIABLES
     //==============================================================
@@ -25,7 +38,7 @@
 	"$y" 0.0 "$prev_y" 0.0 "$dy" 0.0 "$dys" 0.0
 	"$z" 0.0 "$prev_z" 0.0 "$dz" 0.0
 	
-	"$t" 0.0 "$prev_t" 0.0 "$dt" 0.0
+	"$time" 0.0 "$prev_time" 0.0 "$dtime" 0.0
 	"$v" 0.0 "$prev_v" 0.0 "$dv" 0.0
 	
 	"$timer" 0.0
@@ -52,13 +65,17 @@
 	"$frame_empty" 10.0
 	"$frame_minus" 11.0
 
+    $speed 0
+
     //==============================================================
     // COLOR VARIABLES
     //==============================================================  
     $goodThreshold  0
     $badThreshold   0
-    $goodRange   1
+    $goodRange  1
     $badRange   1
+
+    $temp 0
 
     $isGood     0
     $isBad      0
@@ -68,21 +85,72 @@
     $isNotBad      0
     $isNotNeutral  0
 
+    $hasBeenGood    0
+    $hasBeenBad     0
     $hasBeenNeutral 0
 
     // neutral buckets
+    $g_bucket_1 0
+    $g_bucket_2 0
+
+    $b_bucket_1 0
+    $b_bucket_2 0
+
     $n_bucket_1 0
     $n_bucket_2 0
-    $n_bucket_3 0
-    $n_bucket_4 0
-    $n_bucket_5 0
-    $n_bucket_6 0
 
-    $prev_speedo 0
+    $prev_frame 0
 
-    //==============================================================
 	
 	Proxies {
+    //==============================================================
+    // UPDATE RATE
+    //==============================================================
+        // get const_interval
+        // const_interval = 1/framerate
+        Divide {
+            srcVar1 "$1"
+            srcVar2 "$framerate"
+            resultVar "$const_interval"
+        }
+
+        // Reset oldtime on new map
+        // if(oldtime>time){oldtime=0}
+        LessOrEqual {
+            srcVar1         "$oldtime"
+            srcVar2         "$time"
+            resultVar       "$oldtime"
+            greaterVar      "$0"
+            lessEqualVar    "$oldtime"
+        }
+
+		// Get current time
+		CurrentTime { resultVar $time }
+
+		// Calculate current interval
+        // interval = time - oldtime
+		Subtract { srcVar1 $time srcVar2 $oldtime resultVar $interval }
+
+		// Sets $update to 1 if it's time to update
+        // if(interval>const_interval){update=1}
+        LessOrEqual {
+            srcVar1         "$interval"
+            srcVar2         "$const_interval"
+            resultVar       "$update"
+            greaterVar      "$1"
+            lessEqualVar    "$0"
+        }
+    
+		// Save current time if updating
+        // if(update==1){oldtime=time}
+        LessOrEqual {
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$oldtime"
+            greaterVar      "$time"
+            lessEqualVar    "$oldtime"
+        }
+
     //==============================================================
     // HORIZONTAL SPEED
     //==============================================================
@@ -96,13 +164,13 @@
 		PlayerSpeed { scale 1 resultVar "$v" }
 		
 		// get game time
-		CurrentTime { resultVar "$t" }
+		CurrentTime { resultVar "$time" }
 		
-		// dx = x - prev_x, dy = y - prev_y, dz = z - prev_z, dt = t - prev_t, dv = abs(v - prev_v)
+		// dx = x - prev_x, dy = y - prev_y, dz = z - prev_z, dtime = t - prev_time, dv = abs(v - prev_v)
 		Subtract { srcVar1 "$x" srcVar2 "$prev_x" resultVar "$dx" }
 		Subtract { srcVar1 "$y" srcVar2 "$prev_y" resultVar "$dy" }
 		Subtract { srcVar1 "$z" srcVar2 "$prev_z" resultVar "$dz" }
-		Subtract { srcVar1 "$t" srcVar2 "$prev_t" resultVar "$dt" }
+		Subtract { srcVar1 "$time" srcVar2 "$prev_time" resultVar "$dtime" }
 		Subtract { srcVar1 "$v" srcVar2 "$prev_v" resultVar "$dv" }
 		Abs { srcVar1 "$dv" resultVar "$dv" }
 		
@@ -139,10 +207,10 @@
 			resultVar "$tmp"
 		}
 		Add { srcVar1 "$total_dist" srcVar2 "$tmp" resultVar "$total_dist" }
-		// timer += dt
+		// timer += dtime
 		LessOrEqual {
 			srcVar1 "$dist" srcVar2 "$100"
-			lessEqualVar "$dt" greaterVar "$0"
+			lessEqualVar "$dtime" greaterVar "$0"
 			resultVar "$tmp"
 		}
 		Add { srcVar1 "$timer" srcVar2 "$tmp" resultVar "$timer" }
@@ -229,40 +297,68 @@
             "min"                                                   "0"
             "max"                                                   "9999"
             "srcVar1"                                               "$value"
-            "resultVar"                                             "$frame"
+            "resultVar"                                             "$speed"
         }
+
+    //==============================================================
+    // UPDATE FRAME
+    //==============================================================
+        // change display value if updating
+        // if(update==1){fullframe=speed}
+        LessOrEqual {
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$fullframe"
+            greaterVar      "$speed"
+            lessEqualVar    "$fullframe"
+        }
+        Equals {
+            srcVar1 "$fullframe"
+            resultVar "$frame"
+        }
+
     //==============================================================
     // ROUNDING
-    //--------------------------------------------------------------
-        // $speedo = $speedo/10
-        Divide { srcVar1 "$speedo" srcVar2 "$roundAmount" resultVar "$speedo" }
-        // discard decimals of $speedo
-        Int { srcVar1 "$speedo" resultVar "$speedo" }
-        // $speedo = $speedo*10
-		Multiply { srcVar1 "$speedo" srcVar2 "$roundAmount" resultVar "$speedo" }
+    //==============================================================
+        // $frame = $frame/10
+        Divide { srcVar1 "$frame" srcVar2 "$roundAmount" resultVar "$frame" }
+        // discard decimals of $frame
+        Int { srcVar1 "$frame" resultVar "$frame" }
+        // $frame = $frame*10
+		Multiply { srcVar1 "$frame" srcVar2 "$roundAmount" resultVar "$frame" }
 		
     //==============================================================
     // COLORS
     //==============================================================
         // calculate thresholds for speed gain & loss
-        Add { srcVar1 "$prev_speedo" srcVar2 "$goodRange" resultVar "$goodThreshold" }
-        Subtract { srcVar1 "$prev_speedo" srcVar2 "$badRange" resultVar "$badThreshold" }
-        // shift buckets along once
-        Equals { srcVar1 "$n_bucket_5" resultVar "$n_bucket_6" }
-        Equals { srcVar1 "$n_bucket_4" resultVar "$n_bucket_5" }
-        Equals { srcVar1 "$n_bucket_3" resultVar "$n_bucket_4" }
-        Equals { srcVar1 "$n_bucket_2" resultVar "$n_bucket_3" }
-        Equals { srcVar1 "$n_bucket_1" resultVar "$n_bucket_2" }
-
-        Equals { srcVar1 "$g_bucket_2" resultVar "$g_bucket_3" }
-        Equals { srcVar1 "$g_bucket_1" resultVar "$g_bucket_2" }
-
-        Equals { srcVar1 "$b_bucket_2" resultVar "$b_bucket_3" }
-        Equals { srcVar1 "$b_bucket_1" resultVar "$b_bucket_2" }
+        Add { srcVar1 "$prev_frame" srcVar2 "$goodRange" resultVar "$goodThreshold" }
+        Subtract { srcVar1 "$prev_frame" srcVar2 "$badRange" resultVar "$badThreshold" }
+        // if update, shift buckets along once
+        LessOrEqual {
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$g_bucket_2"
+            greaterVar      "$g_bucket_1"
+            lessEqualVar    "$g_bucket_2"
+        }
+        LessOrEqual {
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$b_bucket_2"
+            greaterVar      "$b_bucket_1"
+            lessEqualVar    "$b_bucket_2"
+        }
+        LessOrEqual {
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$n_bucket_2"
+            greaterVar      "$n_bucket_1"
+            lessEqualVar    "$n_bucket_2"
+        }
         
         // if(v<=0){color=colorNeutral}
         LessOrEqual {
-            srcVar1         "$speedo"
+            srcVar1         "$frame"
             srcVar2         "$0"
             resultVar       "$color"
             greaterVar      "$color"
@@ -272,33 +368,61 @@
         // CONDITIONS
         // if(v>goodThreshold){isGood=1}
         LessOrEqual {
-            srcVar1         "$speedo"
+            srcVar1         "$frame"
             srcVar2         "$goodThreshold"
-            resultVar       "$isGood"
+            resultVar       "$temp"
             greaterVar      "$1"
             lessEqualVar    "$0"
         }
         LessOrEqual {
-            srcVar1         "$speedo"
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$isGood"
+            greaterVar      "$temp"
+            lessEqualVar    "$isGood"
+        }
+        LessOrEqual {
+            srcVar1         "$frame"
             srcVar2         "$goodThreshold"
-            resultVar       "$isNotGood"
+            resultVar       "$temp"
             greaterVar      "$0"
             lessEqualVar    "$1"
+        }
+        LessOrEqual {
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$isNotGood"
+            greaterVar      "$temp"
+            lessEqualVar    "$isNotGood"
         }
         // if(v<=badThreshold){isBad=1}
         LessOrEqual {
-            srcVar1         "$speedo"
+            srcVar1         "$frame"
             srcVar2         "$badThreshold"
-            resultVar       "$isBad"
+            resultVar       "$temp"
             greaterVar      "$0"
             lessEqualVar    "$1"
         }
         LessOrEqual {
-            srcVar1         "$speedo"
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$isBad"
+            greaterVar      "$temp"
+            lessEqualVar    "$isBad"
+        }
+        LessOrEqual {
+            srcVar1         "$frame"
             srcVar2         "$badThreshold"
-            resultVar       "$isNotBad"
+            resultVar       "$temp"
             greaterVar      "$1"
             lessEqualVar    "$0"
+        }
+        LessOrEqual {
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$isNotBad"
+            greaterVar      "$temp"
+            lessEqualVar    "$isNotBad"
         }
         // if(isNotGood && isNotBad){isNeutral=1}
         Multiply {
@@ -314,46 +438,18 @@
             lessEqualVar    "$1"
         }
 
-        // NEUTRAL
-        Equals { srcVar1 "$isNeutral" resultVar "$n_bucket_1"}
-        // if(n_bucket_1 && n_bucket_2 && n_bucket_3 etc...){color=colorNeutral}
-        Multiply {
-            srcVar1     "$n_bucket_1"
-            srcVar2     "$n_bucket_2"
-            resultVar   "$hasBeenNeutral"
-        }
-        Multiply {
-            srcVar1     "$hasBeenNeutral"
-            srcVar2     "$n_bucket_3"
-            resultVar   "$hasBeenNeutral"
-        }
-        Multiply {
-            srcVar1     "$hasBeenNeutral"
-            srcVar2     "$n_bucket_4"
-            resultVar   "$hasBeenNeutral"
-        }
-        Multiply {
-            srcVar1     "$hasBeenNeutral"
-            srcVar2     "$n_bucket_5"
-            resultVar   "$hasBeenNeutral"
-        }
-        Multiply {
-            srcVar1     "$hasBeenNeutral"
-            srcVar2     "$n_bucket_6"
-            resultVar   "$hasBeenNeutral"
-        }
-        LessOrEqual {
-            srcVar1         "$hasBeenNeutral"
-            srcVar2         "$0"
-            resultVar       "$color"
-            greaterVar      "$colorNeutral"
-            lessEqualVar    "$color"
-        }
-
+        // COLORING
         // GOOD
-        // if(isGood){color=colorGood}
+        Equals { srcVar1 "$isGood" resultVar "$g_bucket_1"}
+        //// if(g_bucket_1 && g_bucket_2 && g_bucket_3 etc...){color=colorGood}
+        Multiply {
+            srcVar1     "$g_bucket_1"
+            srcVar2     "$g_bucket_2"
+            resultVar   "$hasBeenGood"
+        }
+        // if(hasBeenGood){color=colorGood}
         LessOrEqual {
-            srcVar1         "$isGood"
+            srcVar1         "$hasBeenGood"
             srcVar2         "$0"
             resultVar       "$color"
             greaterVar      "$colorGood"
@@ -361,22 +457,52 @@
         }
 
         // BAD
-        // if(isBad){color=colorBad}
+        Equals { srcVar1 "$isBad" resultVar "$b_bucket_1"}
+        //// if(b_bucket_1 && b_bucket_2 && b_bucket_3 etc...){color=colorBad}
+        Multiply {
+            srcVar1     "$b_bucket_1"
+            srcVar2     "$b_bucket_2"
+            resultVar   "$hasBeenBad"
+        }
+        // if(hasBeenBad){color=colorBad}
         LessOrEqual {
-            srcVar1         "$isBad"
+            srcVar1         "$hasBeenBad"
             srcVar2         "$0"
             resultVar       "$color"
             greaterVar      "$colorBad"
             lessEqualVar    "$color"
         }
+
+        // NEUTRAL
+        Equals { srcVar1 "$isNeutral" resultVar "$n_bucket_1"}
+        //// if(n_bucket_1 && n_bucket_2 && n_bucket_3 etc...){color=colorNeutral}
+        Multiply {
+            srcVar1     "$n_bucket_1"
+            srcVar2     "$n_bucket_2"
+            resultVar   "$hasBeenNeutral"
+        }
+        // if(hasBeenNeutral){color=colorNeutral}
+        LessOrEqual {
+            srcVar1         "$hasBeenNeutral"
+            srcVar2         "$0"
+            resultVar       "$color"
+            greaterVar      "$colorNeutral"
+            lessEqualVar    "$color"
+        }
     //==============================================================
-		// prev_x = x, prev_y = y, prev_z = z, prev_t = t, prev_v = v
+		// prev_x = x, prev_y = y, prev_z = z, prev_time = t, prev_v = v
 		Equals { srcVar1 "$x" resultVar "$prev_x" }
 		Equals { srcVar1 "$y" resultVar "$prev_y" }
 		Equals { srcVar1 "$z" resultVar "$prev_z" }
-		Equals { srcVar1 "$t" resultVar "$prev_t" }
+		Equals { srcVar1 "$time" resultVar "$prev_time" }
 		Equals { srcVar1 "$v" resultVar "$prev_v" }
-        Equals { srcVar1 "$speedo" resultVar "$prev_speedo" }
+        LessOrEqual {
+            srcVar1         "$update"
+            srcVar2         "$0"
+            resultVar       "$prev_frame"
+            greaterVar      "$frame"
+            lessEqualVar    "$prev_frame"
+        }
 
     //==============================================================
     // DIGIT SEPERATION
