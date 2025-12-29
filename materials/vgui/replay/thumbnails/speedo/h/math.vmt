@@ -105,7 +105,7 @@
     $n_bucket_3 0
     $n_bucket_4 0
 
-    $prev_frame 0
+    $prev_fullframe 0
 
 	
 	Proxies {
@@ -307,6 +307,16 @@
         }
 
     //==============================================================
+    // ROUNDING
+    //==============================================================
+        // $speed = $speed/10
+        Divide { srcVar1 "$speed" srcVar2 "$roundAmount" resultVar "$speed" }
+        // discard decimals of $speed
+        Int { srcVar1 "$speed" resultVar "$speed" }
+        // $speed = $speed*10
+		Multiply { srcVar1 "$speed" srcVar2 "$roundAmount" resultVar "$speed" }
+        
+    //==============================================================
     // UPDATE FRAME
     //==============================================================
         // change display value if updating
@@ -314,38 +324,28 @@
         LessOrEqual {
             srcVar1         "$update"
             srcVar2         "$0"
-            resultVar       "$fullframe"
-            greaterVar      "$speed"
-            lessEqualVar    "$fullframe"
+            resultVar       "$prev_fullframe"
+            greaterVar      "$fullframe"
+            lessEqualVar    "$prev_fullframe"
         }
         LessOrEqual {
             srcVar1         "$update"
             srcVar2         "$0"
-            resultVar       "$prev_frame"
-            greaterVar      "$frame"
-            lessEqualVar    "$prev_frame"
+            resultVar       "$fullframe"
+            greaterVar      "$speed"
+            lessEqualVar    "$fullframe"
         }
         Equals {
             srcVar1 "$fullframe"
             resultVar "$frame"
         }
-
-    //==============================================================
-    // ROUNDING
-    //==============================================================
-        // $frame = $frame/10
-        Divide { srcVar1 "$frame" srcVar2 "$roundAmount" resultVar "$frame" }
-        // discard decimals of $frame
-        Int { srcVar1 "$frame" resultVar "$frame" }
-        // $frame = $frame*10
-		Multiply { srcVar1 "$frame" srcVar2 "$roundAmount" resultVar "$frame" }
 		
     //==============================================================
     // COLORS
     //==============================================================
         // calculate thresholds for speed gain & loss
-        Add { srcVar1 "$prev_frame" srcVar2 "$goodRange" resultVar "$goodThreshold" }
-        Subtract { srcVar1 "$prev_frame" srcVar2 "$badRange" resultVar "$badThreshold" }
+        Add { srcVar1 "$prev_fullframe" srcVar2 "$goodRange" resultVar "$goodThreshold" }
+        Subtract { srcVar1 "$prev_fullframe" srcVar2 "$badRange" resultVar "$badThreshold" }
         // if update, shift buckets along once
         LessOrEqual {
             srcVar1         "$update"
@@ -415,7 +415,7 @@
         
         // if(v<=0){color=colorNeutral}
         LessOrEqual {
-            srcVar1         "$frame"
+            srcVar1         "$fullframe"
             srcVar2         "$0"
             resultVar       "$color"
             greaterVar      "$color"
@@ -425,7 +425,7 @@
         // CONDITIONS
         // if(v>goodThreshold){isGood=1}
         LessOrEqual {
-            srcVar1         "$frame"
+            srcVar1         "$fullframe"
             srcVar2         "$goodThreshold"
             resultVar       "$temp"
             greaterVar      "$1"
@@ -439,7 +439,7 @@
             lessEqualVar    "$isGood"
         }
         LessOrEqual {
-            srcVar1         "$frame"
+            srcVar1         "$fullframe"
             srcVar2         "$goodThreshold"
             resultVar       "$temp"
             greaterVar      "$0"
@@ -454,7 +454,7 @@
         }
         // if(v<=badThreshold){isBad=1}
         LessOrEqual {
-            srcVar1         "$frame"
+            srcVar1         "$fullframe"
             srcVar2         "$badThreshold"
             resultVar       "$temp"
             greaterVar      "$0"
@@ -468,7 +468,7 @@
             lessEqualVar    "$isBad"
         }
         LessOrEqual {
-            srcVar1         "$frame"
+            srcVar1         "$fullframe"
             srcVar2         "$badThreshold"
             resultVar       "$temp"
             greaterVar      "$1"
